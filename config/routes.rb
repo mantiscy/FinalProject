@@ -16,4 +16,6 @@ ModelsSetupPlay::Application.routes.draw do
 
   get '/search', to: 'home#search'
 
+  get '/cat_show/:id', to: 'home#cat_show', as: 'cat_show'
+
 end

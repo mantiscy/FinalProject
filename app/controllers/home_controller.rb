@@ -1,10 +1,14 @@
 class HomeController < ApplicationController
   def index
-    @q = Product.search(params[:q])
-    @products = @q.result(distinct: true)
+    @products = Product.all
   end
 
   def search
     
+  end
+
+  def cat_show
+    @products = Category.find(params[:id]).products
+    render :template => "home/index"
   end
 end

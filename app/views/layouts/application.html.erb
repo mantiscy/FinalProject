@@ -40,16 +40,16 @@
     </div>
   </nav>
     <div id='categories_menu'>
-      <p>CLOTHING</p>
-      <p>ELECTRONICS</p>
-      <p>ACCESSORIES</p>
-      <p>OTHER STUFF</p>
+      <% Category.all.each do |c| %>
+        <p><%= link_to c.name.upcase, cat_show_path(c) %></p>
+      <% end %>
+      <p>more</p>
     </div>
 
-  <div class='container_16'>
+
 
   <%= yield %>
-  </div>
+
   </div>
 <!--   <footer class="site-footer">
     I'm the Sticky Footer.

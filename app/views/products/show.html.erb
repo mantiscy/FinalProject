@@ -1,23 +1,31 @@
+<div class='container_16 prod_details'>
+  <div class='grid_15 prefix_1 prod_header'>
+    <p><%= @product.name %></p>
+  </div>
 
-<div class='grid_15 prefix_1 prod_header'>
-  <p><%= @product.name %></p>
+  <div class='grid_6 prefix_1'>
+    <%= image_tag @product.product_image.detail.url, class: 'prod_img' %>
+  </div>
+  <div class='grid_8 suffix_1 show_box'>
+    <p>
+      <b>By User:</b>
+      <%= @product.user.email %>
+    </p>
+
+    <p>
+      <b>Description:</b>
+      <%= @product.description %>
+    </p>
+
+
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Delete', @product, method: :delete %>
+  </div>
+</div>
+<div class='more_items'>
+  <% prods = @product.user.products %>
+  <% prods.each do |p| %>
+    <%= link_to (image_tag p.product_image.mini.url, class: 'mini'), product_path(p) %>
+  <% end %>
 </div>
 
-<div class='grid_6 prefix_1'>
-  <%= image_tag @product.product_image.detail.url, class: 'prod_img' %>
-</div>
-<div class='grid_8 suffix_1 show_box'>
-  <p>
-    <b>By User:</b>
-    <%= @product.user.email %>
-  </p>
-
-  <p>
-    <b>Description:</b>
-    <%= @product.description %>
-  </p>
-
-
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Delete', @product, method: :delete %>
-</div>
