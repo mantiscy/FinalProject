@@ -1,0 +1,12 @@
+<div class='grid_5 product_box'>
+
+  
+  <%= image_tag(product.product_image.thumb.url) %>
+  <p><%= product.name %></p>
+  <p>Categories:</p>
+  <% product.categories.each do |c| %>
+    <li><%= c.name %></li>
+  <% end %>
+  <%= link_to 'Remove Item', product, method: :delete %>
+
+</div>

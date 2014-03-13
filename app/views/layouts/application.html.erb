@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ModelsSetupPlay</title>
+  <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+  <nav>
+    <div id='menu_top'>
+      <%= link_to image_tag("/assets/thebartershop_logo_1.png"), home_index_path %>
+      <div id='center_menu'>
+        <%= form_tag search_path, method: :get, id: 'product_search' do %>
+          <%= text_field_tag(:search, nil, placeholder: "Search here", autofocus: true, id: 'search_box') %>
+          <%= content_tag(:button, "Search", class: 'submit_btn') %>
+        <% end %>
+        <a href='#' id='advanced'>Advanced</a>
+      </div>
+      <div id='right_nav'>
+        <% if current_user %>
+          <ul>
+            <li>Hello, <%=current_user.email%>
+              <ul>
+                <li><%= link_to 'My Items', products_path %></li>
+                <li><%= link_to 'My Offers', offers_path %></li>
+                <li><%= link_to 'Add Item', new_product_path %></li>
+                <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </li>
+          </ul>
+        <% else %>
+          <p><%= link_to 'Log In', new_user_session_path %></p>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+    <div id='categories_menu'>
+      <p>CLOTHING</p>
+      <p>ELECTRONICS</p>
+      <p>ACCESSORIES</p>
+      <p>OTHER STUFF</p>
+    </div>
+
+  <div class='container_16'>
+
+  <%= yield %>
+  </div>
+  </div>
+<!--   <footer class="site-footer">
+    I'm the Sticky Footer.
+  </footer> -->
+</body>
+</html>
