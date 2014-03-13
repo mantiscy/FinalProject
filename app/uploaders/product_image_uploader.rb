@@ -37,7 +37,7 @@ class ProductImageUploader < CarrierWave::Uploader::Base
   # end
 
   version :thumb do
-    process :resize_to_fit => [355, 200]
+    process :resize_to_fit => [355, 300]
   end
 
   version :detail do

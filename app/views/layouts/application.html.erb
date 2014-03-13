@@ -18,7 +18,7 @@
           <%= text_field_tag(:search, nil, placeholder: "Search here", autofocus: true, id: 'search_box') %>
           <%= content_tag(:button, "Search", class: 'submit_btn') %>
         <% end %>
-        <a href='#' id='advanced'>Advanced</a>
+
       </div>
       <div id='right_nav'>
         <% if current_user %>
@@ -33,6 +33,7 @@
             </li>
           </ul>
         <% else %>
+          <p><%= link_to 'Sign Up', new_user_registration_path %></p>
           <p><%= link_to 'Log In', new_user_session_path %></p>
         <% end %>
       </div>
