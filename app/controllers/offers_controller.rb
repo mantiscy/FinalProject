@@ -2,12 +2,45 @@ class OffersController < ApplicationController
   # GET /offers
   # GET /offers.json
   def index
-    @offers = Offer.all
+    @offers = current_user.offers
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @offers }
     end
+  end
+
+  def add_first_item
+    @product = Product.find(params[:id]);
+    @offer = Offer.new
+    @offer.products << @product
+    @offer.users << current_user
+    @offer.users << @product.user
+    @offer.save
+    respond_to do |format|
+      format.html { render :template => "offers/add" }
+    end
+  end
+
+  def finalize_offer
+    
+    p_ids = params[:@offer][:product_ids]
+    @offer = Offer.find(params[:id])
+    p_ids.each do |pid|
+      @offer.products << Product.find(pid)
+    end
+    redirect_to offers_path
+  end
+
+  def add
+    @offer = Offer.find(params[:id])
+    @products = []
+    @offer.products.each do |p|
+      if p.user != current_user
+        @products << p
+      end
+    end
+  
   end
 
   # GET /offers/1

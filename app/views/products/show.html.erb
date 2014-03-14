@@ -5,8 +5,6 @@
 
   <div class='grid_6 prefix_1' id='product_image_holder'>
     <span id='zero'><%= image_tag @product.images[0].product_image.detail.url, class: 'prod_img' %></span>
-    <span id='one'><%= image_tag @product.images[1].product_image.detail.url, class: 'prod_img hidden' %></span>
-    <span id='two'><%= image_tag @product.images[2].product_image.detail.url, class: 'prod_img hidden' %></span>
   </div>
 
   <div class='grid_8 suffix_1 show_box'>
@@ -21,11 +19,11 @@
     </p>
 
     <% if current_user == nil %>
-      <%= link_to 'Maker Offer', offers_path %> |
-      <%= link_to 'Ask Question', offers_path %>
+      <%= link_to 'Maker Offer', add_first_item_path(@product) %> |
+      <%= link_to 'Ask Question', add_first_item_path(@product) %>
     <% elsif current_user.email != @product.user.email %>
-      <%= link_to 'Maker Offer', offers_path %> |
-      <%= link_to 'Ask Question', offers_path %>
+      <%= link_to 'Maker Offer', add_first_item_path(@product) %> |
+      <%= link_to 'Ask Question', add_first_item_path(@product) %>
     <% else %>
       <%= link_to 'Edit', edit_product_path(@product) %> |
       <%= link_to 'Delete', @product, method: :delete %>
