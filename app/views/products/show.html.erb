@@ -4,7 +4,7 @@
   </div>
 
   <div class='grid_6 prefix_1'>
-    <%= image_tag @product.product_image.detail.url, class: 'prod_img' %>
+    <%= image_tag @product.images[0].product_image.detail.url, class: 'prod_img' %>
   </div>
   <div class='grid_8 suffix_1 show_box'>
     <p>
@@ -28,12 +28,21 @@
       <%= link_to 'Delete', @product, method: :delete %>
     <% end %>
   </div>
+
+  <div class='grid_6 prefix_1 suffix_9'>
+
+    <% @product.images.each do |i| %>
+      <%= image_tag i.product_image.little.url, class: 'little' %>
+    <% end %>
+  </div>
+
 </div>
+<div class='clear'></div>
 <div class='more_items'>
   <p id='other_items'>Other items from <span><%= @product.user.email %></span></p>
   <% prods = @product.user.products %>
   <% prods.each do |p| %>
-    <%= link_to (image_tag p.product_image.mini.url, class: 'mini'), product_path(p) %>
+    <%= link_to (image_tag p.images[0].product_image.mini.url, class: 'mini'), product_path(p) %>
   <% end %>
 </div>
 

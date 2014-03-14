@@ -43405,3 +43405,58 @@ Served asset /products.js - 304 Not Modified (0ms)
 Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-13 09:55:28 +0000
 Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20140309202528)
+Migrating to CreateProducts (20140309202641)
+Migrating to CreateOffers (20140309202731)
+Migrating to CreateOffersUsersTable (20140309202823)
+Migrating to CreateOffersProductsTable (20140309203134)
+Migrating to CreateCategories (20140309205711)
+Migrating to CreateCategoriesProductsTable (20140309205735)
+Migrating to AddImageToProduct (20140312180758)
+Migrating to CreateImages (20140313151055)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_images_on_product_id" ON "images" ("product_id")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140313151055')
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveImageFromProductsTable (20140313152716)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TEMPORARY TABLE "altered_products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_id" integer, "description" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "product_image" varchar(255)) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "temp_index_altered_products_on_user_id" ON "altered_products" ("user_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "products"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_products" ("id","name","user_id","description","created_at","updated_at","product_image") VALUES (22, 'Babolat Tennis Racket', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie, justo vel accumsan ornare, arcu neque eleifend ipsum, id mollis elit arcu ut erat. Nulla sit amet libero iaculis, aliquet risus ut, malesuada neque. Quisque sit amet convallis nulla. Cras porta dolor accumsan est convallis, sit amet dapibus justo lacinia. Nullam diam mi, luctus vel ornare id, vestibulum vel sem. Suspendisse dui massa, vehicula et arcu non, placerat lobortis elit. Morbi id mauris rhoncus, convallis felis ut, mollis lacus. Quisque ac dui tortor.', '2014-03-13 19:33:21.818062', '2014-03-13 19:33:21.824257', 'babolat_pure_storm_tour_gt_2011.jpg')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_products" ("id","name","user_id","description","created_at","updated_at","product_image") VALUES (23, 'Jeans for men', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie, justo vel accumsan ornare, arcu neque eleifend ipsum, id mollis elit arcu ut erat. Nulla sit amet libero iaculis, aliquet risus ut, malesuada neque. Quisque sit amet convallis nulla. Cras porta dolor accumsan est convallis, sit amet dapibus justo lacinia. Nullam diam mi, luctus vel ornare id, vestibulum vel sem. Suspendisse dui massa, vehicula et arcu non, placerat lobortis elit. Morbi id mauris rhoncus, convallis felis ut, mollis lacus. Quisque ac dui tortor.', '2014-03-13 19:41:12.937637', '2014-03-13 19:41:12.979470', 'pepe-jeans-jeans-p_z_8217_A.jpeg')[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "products"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_id" integer, "description" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_products_on_user_id" ON "products" ("user_id")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_products"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "products" ("id","name","user_id","description","created_at","updated_at") VALUES (22, 'Babolat Tennis Racket', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie, justo vel accumsan ornare, arcu neque eleifend ipsum, id mollis elit arcu ut erat. Nulla sit amet libero iaculis, aliquet risus ut, malesuada neque. Quisque sit amet convallis nulla. Cras porta dolor accumsan est convallis, sit amet dapibus justo lacinia. Nullam diam mi, luctus vel ornare id, vestibulum vel sem. Suspendisse dui massa, vehicula et arcu non, placerat lobortis elit. Morbi id mauris rhoncus, convallis felis ut, mollis lacus. Quisque ac dui tortor.', '2014-03-13 19:33:21.818062', '2014-03-13 19:33:21.824257')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "products" ("id","name","user_id","description","created_at","updated_at") VALUES (23, 'Jeans for men', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie, justo vel accumsan ornare, arcu neque eleifend ipsum, id mollis elit arcu ut erat. Nulla sit amet libero iaculis, aliquet risus ut, malesuada neque. Quisque sit amet convallis nulla. Cras porta dolor accumsan est convallis, sit amet dapibus justo lacinia. Nullam diam mi, luctus vel ornare id, vestibulum vel sem. Suspendisse dui massa, vehicula et arcu non, placerat lobortis elit. Morbi id mauris rhoncus, convallis felis ut, mollis lacus. Quisque ac dui tortor.', '2014-03-13 19:41:12.937637', '2014-03-13 19:41:12.979470')[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "altered_products"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140313152716')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20140309202528)
+Migrating to CreateProducts (20140309202641)
+Migrating to CreateOffers (20140309202731)
+Migrating to CreateOffersUsersTable (20140309202823)
+Migrating to CreateOffersProductsTable (20140309203134)
+Migrating to CreateCategories (20140309205711)
+Migrating to CreateCategoriesProductsTable (20140309205735)
+Migrating to AddImageToProduct (20140312180758)
+Migrating to CreateImages (20140313151055)
+Migrating to RemoveImageFromProductsTable (20140313152716)
+Migrating to AddImageToImages (20140314094922)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "images" ADD "product_image" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140314094922')[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml

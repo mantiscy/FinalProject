@@ -28,6 +28,7 @@ class ProductsController < ApplicationController
   # GET /products/new.json
   def new
     @product = Product.new
+    3.times{ @product.images.build }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -43,6 +44,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    
     @product = Product.new(params[:product])
     @products = current_user.products
     respond_to do |format|
