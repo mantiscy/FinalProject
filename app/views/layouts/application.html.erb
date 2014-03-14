@@ -23,7 +23,7 @@
       <div id='right_nav'>
         <% if current_user %>
           <ul>
-            <li>Hello, <%=current_user.email%>
+            <li id='hello_user'>Hello, <%=current_user.email%>
               <ul>
                 <li><%= link_to 'My Items', products_path %></li>
                 <li><%= link_to 'My Offers', offers_path %></li>

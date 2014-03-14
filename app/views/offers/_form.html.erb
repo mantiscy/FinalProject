@@ -1,17 +1,38 @@
-<%= form_for(@offer) do |f| %>
-  <% if @offer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@offer.errors.count, "error") %> prohibited this offer from being saved:</h2>
-
-      <ul>
-      <% @offer.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
+<div class='container_16 prod_details'>
+  <div class='grid_15 prefix_1 prod_header'>
+    <p><%= @product.name %></p>
   </div>
-<% end %>
+
+  <div class='grid_6 prefix_1'>
+    <%= image_tag @product.product_image.detail.url, class: 'prod_img' %>
+  </div>
+  <div class='grid_8 suffix_1 show_box'>
+    <p>
+      <b>By User:</b>
+      <%= @product.user.email %>
+    </p>
+
+    <p>
+      <b>Description:</b>
+      <%= @product.description %>
+    </p>
+
+    <% if current_user == nil %>
+      <%= link_to 'Maker Offer', offers_path %> |
+      <%= link_to 'Ask Question', offers_path %>
+    <% elsif current_user.email != @product.user.email %>
+      <%= link_to 'Maker Offer', offers_path %> |
+      <%= link_to 'Ask Question', offers_path %>
+    <% else %>
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <%= link_to 'Delete', @product, method: :delete %>
+    <% end %>
+  </div>
+</div>
+<div class='more_items'>
+  <p id='other_items'>Other items from <span><%= @product.user.email %></span></p>
+  <% prods = @product.user.products %>
+  <% prods.each do |p| %>
+    <%= link_to (image_tag p.product_image.mini.url, class: 'mini'), product_path(p) %>
+  <% end %>
+</div>
