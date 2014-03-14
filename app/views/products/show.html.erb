@@ -3,9 +3,12 @@
     <p><%= @product.name %></p>
   </div>
 
-  <div class='grid_6 prefix_1'>
-    <%= image_tag @product.images[0].product_image.detail.url, class: 'prod_img' %>
+  <div class='grid_6 prefix_1' id='product_image_holder'>
+    <span id='zero'><%= image_tag @product.images[0].product_image.detail.url, class: 'prod_img' %></span>
+    <span id='one'><%= image_tag @product.images[1].product_image.detail.url, class: 'prod_img hidden' %></span>
+    <span id='two'><%= image_tag @product.images[2].product_image.detail.url, class: 'prod_img hidden' %></span>
   </div>
+
   <div class='grid_8 suffix_1 show_box'>
     <p>
       <b>By User:</b>
@@ -30,9 +33,10 @@
   </div>
 
   <div class='grid_6 prefix_1 suffix_9'>
-
+    <% counter = 0 %>
     <% @product.images.each do |i| %>
-      <%= image_tag i.product_image.little.url, class: 'little' %>
+      <%= image_tag i.product_image.little.url, class: 'little', id: counter %>
+      <% counter += 1 %>
     <% end %>
   </div>
 

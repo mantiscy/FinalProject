@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require_tree .
 
+$(function(){
+
+  $('.little').click(function(ev){
+    //Impletent functionality to change detail images based on whats clicked
+  });
+
+});
