@@ -1,7 +1,7 @@
 <div class='container_16 prod_details'>
-  <div class='grdi_16 prod_header'>My current offers</div>
+  <div class='grdi_16 prod_header'>My current offers</div><hr>
   <% @offers.each do |offer| %>
-    <div grid_16><hr></div>
+    <div grid_16></div>
     <% if offer.users.first == current_user %>
       <p>Exchange with <%= offer.users[1].email %></p>
     <% else %>
@@ -9,7 +9,11 @@
     <% end %>
 
     <div class='prefix_1 grid_6 offer_box_index'>
-      <p>You offerred:</p>
+      <% if offer.completed == 'y' %>
+        <p>You received:</p>
+      <% else %>
+        <p>You offerred:</p>
+      <% end %>
       <% offer.products.each do |p| %>
         <% if p.user == current_user %>
           <%= image_tag p.images[0].product_image.little.url, class: 'little'%>
@@ -18,7 +22,11 @@
     </div>
 
     <div class='grid_6 offer_box_index'>
-      <p>You shall receive:</p>
+      <% if offer.completed == 'y' %>
+        <p>You offerred:</p>
+      <% else %>
+        <p>You will receive:</p>
+      <% end %>
       <% offer.products.each do |p| %>
         <% if p.user != current_user %>
           <%= image_tag p.images[0].product_image.little.url, class: 'little'%>

@@ -47,8 +47,8 @@ class OffersController < ApplicationController
 
   def accept #Make the swap of the items
     @offer = Offer.find(params[:id])
-    user1 = @offer.users.first
-    user2 = @offer.users.last
+    user1 = @offer.users[0]
+    user2 = @offer.users[1]
     user1_products = []
     user2_products = []
     @offer.products.each do |p|
@@ -61,9 +61,13 @@ class OffersController < ApplicationController
       end
     end
     user1_products.each do |p|
+      p.user = user2
+      p.save
       user2.products << p
     end
     user2_products.each do |p|
+      p.user = user1
+      p.save
       user1.products << p
     end
     user1.save
