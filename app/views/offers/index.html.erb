@@ -1,13 +1,14 @@
 <div class='container_16 prod_details'>
- 
+  <div class='grdi_16 prod_header'>My current offers</div>
   <% @offers.each do |offer| %>
+    <div grid_16><hr></div>
     <% if offer.users.first.email == current_user.email %>
       <p>Exchange with <%= offer.users.last.email %></p>
     <% else %>
       <p>Exchange with <%= offer.users.first.email %></p>
     <% end %>
 
-    <div class='offer_box_index'>
+    <div class='prefix_1 grid_6 offer_box_index'>
       <p>You offerred:</p>
       <% offer.products.each do |p| %>
         <% if p.user == current_user %>
@@ -16,7 +17,7 @@
       <% end %>
     </div>
 
-    <div class='offer_box_index'>
+    <div class='grid_6 offer_box_index'>
       <p>You shall receive:</p>
       <% offer.products.each do |p| %>
         <% if p.user != current_user %>
@@ -24,9 +25,11 @@
         <% end %>
       <% end %>
     </div>
-    <p>
+    <div class='offer_options'>
       <%= link_to 'Amend', add_path(offer) %> |
       <%= link_to 'Cancel Offer', offer, method: :delete %>
-    </p>
+    </div>
+    <div class='clear'></div>
+    <div grid_16><hr></div>
   <% end %>
 </div>
