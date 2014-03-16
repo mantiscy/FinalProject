@@ -43462,3 +43462,47 @@ Migrating to AddImageToImages (20140314094922)
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20140309202528)
+Migrating to CreateProducts (20140309202641)
+Migrating to CreateOffers (20140309202731)
+Migrating to CreateOffersUsersTable (20140309202823)
+Migrating to CreateOffersProductsTable (20140309203134)
+Migrating to CreateCategories (20140309205711)
+Migrating to CreateCategoriesProductsTable (20140309205735)
+Migrating to AddImageToProduct (20140312180758)
+Migrating to CreateImages (20140313151055)
+Migrating to RemoveImageFromProductsTable (20140313152716)
+Migrating to AddImageToImages (20140314094922)
+Migrating to AddStatusAndInitiatedByToOffersTable (20140316111014)
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "offers" ADD "completed" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "offes" ADD "initiated_by" varchar(255)[0m
+SQLite3::SQLException: no such table: offes: ALTER TABLE "offes" ADD "initiated_by" varchar(255)
+  [1m[35m (0.7ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20140309202528)
+Migrating to CreateProducts (20140309202641)
+Migrating to CreateOffers (20140309202731)
+Migrating to CreateOffersUsersTable (20140309202823)
+Migrating to CreateOffersProductsTable (20140309203134)
+Migrating to CreateCategories (20140309205711)
+Migrating to CreateCategoriesProductsTable (20140309205735)
+Migrating to AddImageToProduct (20140312180758)
+Migrating to CreateImages (20140313151055)
+Migrating to RemoveImageFromProductsTable (20140313152716)
+Migrating to AddImageToImages (20140314094922)
+Migrating to AddStatusAndInitiatedByToOffersTable (20140316111014)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "offers" ADD "completed" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "offers" ADD "initiated_by" varchar(255)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140316111014')
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml

@@ -14,6 +14,8 @@ class OffersController < ApplicationController
     @product = Product.find(params[:id]);
     @offer = Offer.new
     @offer.products << @product
+    @offer.completed = 'n'
+    @offer.initiated_by = current_user.id.to_s
     @offer.users << current_user
     @offer.users << @product.user
     @offer.save
@@ -41,6 +43,35 @@ class OffersController < ApplicationController
       end
     end
   
+  end
+
+  def accept #Make the swap of the items
+    @offer = Offer.find(params[:id])
+    user1 = @offer.users.first
+    user2 = @offer.users.last
+    user1_products = []
+    user2_products = []
+    @offer.products.each do |p|
+      if p.user == user1
+        user1_products << p
+        #user1.products.find(p.id).delete
+      else
+        user2_products << p
+        #user2.products.find(p.id).delete
+      end
+    end
+    user1_products.each do |p|
+      user2.products << p
+    end
+    user2_products.each do |p|
+      user1.products << p
+    end
+    user1.save
+    user2.save
+    @offer.completed = 'y'
+    @offer.save
+
+    redirect_to home_index_url
   end
 
   # GET /offers/1

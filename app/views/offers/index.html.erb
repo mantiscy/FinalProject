@@ -2,10 +2,10 @@
   <div class='grdi_16 prod_header'>My current offers</div>
   <% @offers.each do |offer| %>
     <div grid_16><hr></div>
-    <% if offer.users.first.email == current_user.email %>
-      <p>Exchange with <%= offer.users.last.email %></p>
+    <% if offer.users.first == current_user %>
+      <p>Exchange with <%= offer.users[1].email %></p>
     <% else %>
-      <p>Exchange with <%= offer.users.first.email %></p>
+      <p>Exchange with <%= offer.users[0].email %></p>
     <% end %>
 
     <div class='prefix_1 grid_6 offer_box_index'>
@@ -26,8 +26,22 @@
       <% end %>
     </div>
     <div class='offer_options'>
-      <%= link_to 'Amend', add_path(offer) %> |
-      <%= link_to 'Cancel Offer', offer, method: :delete %>
+      <% if offer.initiated_by == current_user.id.to_s %>
+        <% if offer.completed == 'y' %>
+          <p>Swap completed</p>
+        <% else %>
+          <%= link_to 'Amend', add_path(offer) %> |
+          <%= link_to 'Cancel Offer', offer, method: :delete %>
+        <% end %>
+      <% else %>
+        <% if offer.completed == 'y' %>
+          <p>Swap completed</p>
+        <% else %>
+          <%= link_to 'Accept Offer', accept_path(offer) %> |
+          <%= link_to 'Make Counter Offer', add_path(offer) %> |
+          <%= link_to 'Cancel Offer', offer, method: :delete %>
+        <% end %>
+      <% end %>
     </div>
     <div class='clear'></div>
     <div grid_16><hr></div>
