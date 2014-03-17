@@ -28,9 +28,13 @@ class OffersController < ApplicationController
     
     p_ids = params[:@offer][:product_ids]
     @offer = Offer.find(params[:id])
+    @offer.products = []
     p_ids.each do |pid|
       @offer.products << Product.find(pid)
     end
+    @offer.initiated_by = current_user.id.to_s
+    @offer.save
+    
     redirect_to offers_path
   end
 
