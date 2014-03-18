@@ -11,4 +11,12 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :offers
   has_many :products
 
+  after_create :send_welcome_email 
+
+  private
+
+    def send_welcome_email
+      UserMailer.registration_confirmation(self).deliver
+    end 
+
 end

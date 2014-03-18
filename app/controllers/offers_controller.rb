@@ -32,9 +32,16 @@ class OffersController < ApplicationController
     p_ids.each do |pid|
       @offer.products << Product.find(pid)
     end
+
+    if @offer.users[0] == current_user
+      @user2 = @offer.users[1]
+    else
+      @user2 = @offer.users[0]
+    end
+
     @offer.initiated_by = current_user.id.to_s
     @offer.save
-    
+    UserMailer.new_offer(@user2, @offer).deliver
     redirect_to offers_path
   end
 
