@@ -14,7 +14,7 @@ ModelsSetupPlay::Application.routes.draw do
 
   root :to => "home#index"
 
-  get '/search', to: 'home#search'
+  get '/search', to: 'application#search'
 
   get '/cat_show/:id', to: 'home#cat_show', as: 'cat_show'
 
