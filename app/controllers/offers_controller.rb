@@ -41,6 +41,7 @@ class OffersController < ApplicationController
 
     @offer.initiated_by = current_user.id.to_s
     @offer.save
+    UserMailer.offer_confirmation(current_user, @offer).deliver
     UserMailer.new_offer(@user2, @offer).deliver
     redirect_to offers_path
   end
@@ -85,7 +86,8 @@ class OffersController < ApplicationController
     user2.save
     @offer.completed = 'y'
     @offer.save
-
+    UserMailer.offer_completed(user1, @offer).deliver
+    UserMailer.offer_completed(user2, @offer).deliver
     redirect_to home_index_url
   end
 

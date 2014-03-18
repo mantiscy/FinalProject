@@ -48380,3 +48380,2185 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 12:16:14 +0000
 Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/offers" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Processing by OffersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mOffer Load (0.1ms)[0m  SELECT "offers".* FROM "offers" INNER JOIN "offers_users" ON "offers"."id" = "offers_users"."offer_id" WHERE "offers_users"."user_id" = 2
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 53[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 58
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 59[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 66
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 72 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 72
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 72[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 73 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 73[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 73
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  Rendered offers/index.html.erb within layouts/application (68.6ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 222.7ms (Views: 178.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /application.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /categories.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /images.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /normalize.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /lightbox.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /products.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /offers.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /categories.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /images.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /offers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /products.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:11:40 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (1ms)
+
+
+Started DELETE "/offers/73" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Processing by OffersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uIwY0hRx7mbvAhogVItNqkjdnuD6sF99eo+31t2I/to=", "id"=>"73"}
+  [1m[35mOffer Load (0.1ms)[0m  SELECT "offers".* FROM "offers" WHERE "offers"."id" = ? LIMIT 1  [["id", "73"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 73
+  [1m[36m (0.3ms)[0m  [1mDELETE FROM "offers_users" WHERE "offers_users"."offer_id" = 73 AND "offers_users"."user_id" IN (1, 2)[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 73
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM "offers_products" WHERE "offers_products"."offer_id" = 73 AND "offers_products"."product_id" IN (31)[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "offers" WHERE "offers"."id" = ?  [["id", 73]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/offers
+Completed 302 Found in 7.8ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/offers" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Processing by OffersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mOffer Load (0.1ms)[0m  [1mSELECT "offers".* FROM "offers" INNER JOIN "offers_users" ON "offers"."id" = "offers_users"."offer_id" WHERE "offers_users"."user_id" = 2[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 53
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 58[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 59
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 66[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 72 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 72[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 72
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  Rendered offers/index.html.erb within layouts/application (57.7ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 66.0ms (Views: 62.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:11:44 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/offers/72" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Processing by OffersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uIwY0hRx7mbvAhogVItNqkjdnuD6sF99eo+31t2I/to=", "id"=>"72"}
+  [1m[35mOffer Load (0.1ms)[0m  SELECT "offers".* FROM "offers" WHERE "offers"."id" = ? LIMIT 1  [["id", "72"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 72
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM "offers_users" WHERE "offers_users"."offer_id" = 72 AND "offers_users"."user_id" IN (1, 2)[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 72
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM "offers_products" WHERE "offers_products"."offer_id" = 72 AND "offers_products"."product_id" IN (38, 31)[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "offers" WHERE "offers"."id" = ?  [["id", 72]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/offers
+Completed 302 Found in 4.0ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/offers" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Processing by OffersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mOffer Load (0.1ms)[0m  [1mSELECT "offers".* FROM "offers" INNER JOIN "offers_users" ON "offers"."id" = "offers_users"."offer_id" WHERE "offers_users"."user_id" = 2[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 53
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 58[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 59
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 66[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  Rendered offers/index.html.erb within layouts/application (18.3ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 25.3ms (Views: 23.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:11:46 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/offers" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Processing by OffersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mOffer Load (0.1ms)[0m  SELECT "offers".* FROM "offers" INNER JOIN "offers_users" ON "offers"."id" = "offers_users"."offer_id" WHERE "offers_users"."user_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 53[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 58
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 59[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 66
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  Rendered offers/index.html.erb within layouts/application (41.9ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 49.0ms (Views: 46.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:11:52 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2014-03-18 13:11:58 +0000
+Processing by HomeController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  Rendered products/_product.html.erb (7.2ms)
+  Rendered home/index.html.erb within layouts/application (11.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 21.7ms (Views: 19.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/products/31" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "31"]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE "products"."user_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  Rendered products/show.html.erb within layouts/application (9.1ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 20.9ms (Views: 15.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:11:59 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/add_first_item/31" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Processing by OffersController#add_first_item as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "31"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "offers" ("completed", "created_at", "initiated_by", "updated_at") VALUES (?, ?, ?, ?)[0m  [["completed", "n"], ["created_at", Tue, 18 Mar 2014 13:12:01 UTC +00:00], ["initiated_by", "1"], ["updated_at", Tue, 18 Mar 2014 13:12:01 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  INSERT INTO "offers_products" ("offer_id", "product_id") VALUES (74, 31)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "offers_users" ("offer_id", "user_id") VALUES (74, 1)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "offers_users" ("offer_id", "user_id") VALUES (74, 2)
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."user_id" = 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."user_id" = 2[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  Rendered offers/add.html.erb within layouts/application (6.2ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 21.3ms (Views: 13.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:01 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/finalize_offer/74" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Processing by OffersController#finalize_offer as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fx9ze6uW9Rj232mJfICh+9ekYY9Uwh4j+sMby5YWvHY=", "@offer"=>{"product_ids"=>["37", "31"]}, "commit"=>"Finalize Offer", "id"=>"74"}
+  [1m[35mOffer Load (0.1ms)[0m  SELECT "offers".* FROM "offers" WHERE "offers"."id" = ? LIMIT 1  [["id", "74"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 74[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM "offers_products" WHERE "offers_products"."offer_id" = 74 AND "offers_products"."product_id" IN (31)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "37"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "offers_products" ("offer_id", "product_id") VALUES (74, 37)[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "31"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "offers_products" ("offer_id", "product_id") VALUES (74, 31)[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  Rendered user_mailer/offer_confirmation.html.erb (0.3ms)
+
+Sent mail to e@e.com (14.1ms)
+Date: Tue, 18 Mar 2014 13:12:04 +0000
+From: from@example.com
+To: e@e.com
+Message-ID: <532846247c92c_101193ff89d4fba846246a@Nikolaoss-MacBook-Pro.local.mail>
+Subject: Offer successfully placed!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Your offer has been successfully created. The other user has been informed.
+  Rendered user_mailer/new_offer.html.erb (0.6ms)
+
+Sent mail to r@r.com (8.8ms)
+Date: Tue, 18 Mar 2014 13:12:04 +0000
+From: from@example.com
+To: r@r.com
+Message-ID: <5328462482f5c_101193ff89d4fba84625c1@Nikolaoss-MacBook-Pro.local.mail>
+Subject: You have received a new offer!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You have a new offer baby! Woohoo!!!
+Redirected to http://localhost:3000/offers
+Completed 302 Found in 65.6ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/offers" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Processing by OffersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mOffer Load (0.1ms)[0m  SELECT "offers".* FROM "offers" INNER JOIN "offers_users" ON "offers"."id" = "offers_users"."offer_id" WHERE "offers_users"."user_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 53[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 58
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 59[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 66
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 74[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  Rendered offers/index.html.erb within layouts/application (24.6ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 36.9ms (Views: 31.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:04 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/offers" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Processing by OffersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mOffer Load (0.1ms)[0m  SELECT "offers".* FROM "offers" INNER JOIN "offers_users" ON "offers"."id" = "offers_users"."offer_id" WHERE "offers_users"."user_id" = 2
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 53[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 58
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 59[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 66
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 74[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  Rendered offers/index.html.erb within layouts/application (21.9ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 30.7ms (Views: 27.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:12:18 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/accept/74" for 127.0.0.1 at 2014-03-18 13:12:20 +0000
+Processing by OffersController#accept as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mOffer Load (0.1ms)[0m  [1mSELECT "offers".* FROM "offers" WHERE "offers"."id" = ? LIMIT 1[0m  [["id", "74"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 74[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "products" SET "user_id" = 2, "updated_at" = '2014-03-18 13:12:20.922228' WHERE "products"."id" = 37[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "products" SET "user_id" = 1, "updated_at" = '2014-03-18 13:12:20.926146' WHERE "products"."id" = 31
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "offers" SET "completed" = 'y', "updated_at" = '2014-03-18 13:12:20.932100' WHERE "offers"."id" = 74[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+  Rendered user_mailer/offer_completed.html.erb (0.3ms)
+  Rendered user_mailer/offer_completed.html.erb (0.2ms)
+
+Sent mail to r@r.com (8.7ms)
+Date: Tue, 18 Mar 2014 13:12:20 +0000
+From: from@example.com
+To: r@r.com
+Message-ID: <53284634e6f01_101193ff89e68d5f462626@Nikolaoss-MacBook-Pro.local.mail>
+Subject: Congrats! Swap completed!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Congrats! The swap was completed.
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 40.3ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2014-03-18 13:12:20 +0000
+Processing by HomeController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  Rendered products/_product.html.erb (4.0ms)
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 15.4ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:12:21 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/products/37" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "37"]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."user_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  Rendered products/show.html.erb within layouts/application (15.0ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 52.3ms (Views: 29.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:12:57 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Processing by HomeController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  Rendered products/_product.html.erb (3.2ms)
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 12.2ms (Views: 11.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:12:59 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/products/31" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "31"]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."user_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  Rendered products/show.html.erb within layouts/application (4.6ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 12.9ms (Views: 10.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:13:00 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/add_first_item/31" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Processing by OffersController#add_first_item as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "31"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "offers" ("completed", "created_at", "initiated_by", "updated_at") VALUES (?, ?, ?, ?)  [["completed", "n"], ["created_at", Tue, 18 Mar 2014 13:13:02 UTC +00:00], ["initiated_by", "2"], ["updated_at", Tue, 18 Mar 2014 13:13:02 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "offers_products" ("offer_id", "product_id") VALUES (75, 31)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "offers_users" ("offer_id", "user_id") VALUES (75, 2)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "offers_users" ("offer_id", "user_id") VALUES (75, 1)[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."user_id" = 2[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."user_id" = 1[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  Rendered offers/add.html.erb within layouts/application (7.4ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 26.6ms (Views: 14.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:13:02 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started PUT "/finalize_offer/75" for 127.0.0.1 at 2014-03-18 13:13:07 +0000
+Processing by OffersController#finalize_offer as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uIwY0hRx7mbvAhogVItNqkjdnuD6sF99eo+31t2I/to=", "@offer"=>{"product_ids"=>["37", "31"]}, "commit"=>"Finalize Offer", "id"=>"75"}
+  [1m[36mOffer Load (0.1ms)[0m  [1mSELECT "offers".* FROM "offers" WHERE "offers"."id" = ? LIMIT 1[0m  [["id", "75"]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 75
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  DELETE FROM "offers_products" WHERE "offers_products"."offer_id" = 75 AND "offers_products"."product_id" IN (31)
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "37"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "offers_products" ("offer_id", "product_id") VALUES (75, 37)
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "31"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "offers_products" ("offer_id", "product_id") VALUES (75, 31)
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 75
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered user_mailer/offer_confirmation.html.erb (0.0ms)
+
+Sent mail to r@r.com (9.2ms)
+Date: Tue, 18 Mar 2014 13:13:07 +0000
+From: from@example.com
+To: r@r.com
+Message-ID: <53284663e01b1_101193ff89e47a9386275c@Nikolaoss-MacBook-Pro.local.mail>
+Subject: Offer successfully placed!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Your offer has been successfully created. The other user has been informed.
+  Rendered user_mailer/new_offer.html.erb (0.0ms)
+
+Sent mail to e@e.com (8.3ms)
+Date: Tue, 18 Mar 2014 13:13:07 +0000
+From: from@example.com
+To: e@e.com
+Message-ID: <53284663e5cc1_101193ff89e47a9386285d@Nikolaoss-MacBook-Pro.local.mail>
+Subject: You have received a new offer!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You have a new offer baby! Woohoo!!!
+Redirected to http://localhost:3000/offers
+Completed 302 Found in 54.5ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/offers" for 127.0.0.1 at 2014-03-18 13:13:07 +0000
+Processing by OffersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mOffer Load (0.1ms)[0m  [1mSELECT "offers".* FROM "offers" INNER JOIN "offers_users" ON "offers"."id" = "offers_users"."offer_id" WHERE "offers_users"."user_id" = 2[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 53
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 58[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 59
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 66[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 74
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 75 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 75
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 75[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  Rendered offers/index.html.erb within layouts/application (30.1ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 40.5ms (Views: 36.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:13:08 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/offers" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Processing by OffersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mOffer Load (0.1ms)[0m  SELECT "offers".* FROM "offers" INNER JOIN "offers_users" ON "offers"."id" = "offers_users"."offer_id" WHERE "offers_users"."user_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 53[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 58
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 59[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 66
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 74[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 75 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 75[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 75
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  Rendered offers/index.html.erb within layouts/application (54.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 63.4ms (Views: 60.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:13:17 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/accept/75" for 127.0.0.1 at 2014-03-18 13:13:20 +0000
+Processing by OffersController#accept as HTML
+  Parameters: {"id"=>"75"}
+  [1m[35mOffer Load (0.1ms)[0m  SELECT "offers".* FROM "offers" WHERE "offers"."id" = ? LIMIT 1  [["id", "75"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 75[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 75
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "products" SET "user_id" = 1, "updated_at" = '2014-03-18 13:13:20.248666' WHERE "products"."id" = 37
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "products" SET "user_id" = 2, "updated_at" = '2014-03-18 13:13:20.251173' WHERE "products"."id" = 31[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "offers" SET "completed" = 'y', "updated_at" = '2014-03-18 13:13:20.256402' WHERE "offers"."id" = 75
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 14.3ms
+
+NameError (undefined local variable or method `user1' for #<UserMailer:0x007ff13cc23f50>):
+  app/mailers/user_mailer.rb:17:in `offer_completed'
+  app/controllers/offers_controller.rb:89:in `accept'
+
+
+  Rendered /Users/Nikolas/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Nikolas/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Nikolas/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/accept/75" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Processing by OffersController#accept as HTML
+  Parameters: {"id"=>"75"}
+  [1m[35mOffer Load (0.1ms)[0m  SELECT "offers".* FROM "offers" WHERE "offers"."id" = ? LIMIT 1  [["id", "75"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 75[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 75
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "products" SET "user_id" = 1, "updated_at" = '2014-03-18 13:13:34.495087' WHERE "products"."id" = 31
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "products" SET "user_id" = 2, "updated_at" = '2014-03-18 13:13:34.500387' WHERE "products"."id" = 37[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  Rendered user_mailer/offer_completed.html.erb (0.0ms)
+
+Sent mail to r@r.com (9.8ms)
+Date: Tue, 18 Mar 2014 13:13:34 +0000
+From: from@example.com
+To: r@r.com
+Message-ID: <5328467e7e5df_101193ff89e6b89986292c@Nikolaoss-MacBook-Pro.local.mail>
+Subject: Congrats! Swap completed!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Congrats! The swap was completed.
+  Rendered user_mailer/offer_completed.html.erb (0.0ms)
+
+Sent mail to e@e.com (9.0ms)
+Date: Tue, 18 Mar 2014 13:13:34 +0000
+From: from@example.com
+To: e@e.com
+Message-ID: <5328467e845a1_101193ff89e6b899863026@Nikolaoss-MacBook-Pro.local.mail>
+Subject: Congrats! Swap completed!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Congrats! The swap was completed.
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 131.9ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Processing by HomeController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  Rendered products/_product.html.erb (14.5ms)
+  Rendered home/index.html.erb within layouts/application (15.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 36.5ms (Views: 33.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:13:34 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/offers" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Processing by OffersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mOffer Load (0.1ms)[0m  SELECT "offers".* FROM "offers" INNER JOIN "offers_users" ON "offers"."id" = "offers_users"."offer_id" WHERE "offers_users"."user_id" = 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 53[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 58
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 59[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 66
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 74[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 75 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 75[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 75
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  Rendered offers/index.html.erb within layouts/application (72.8ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 81.4ms (Views: 77.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:13:42 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
+
+
+Started GET "/offers" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Processing by OffersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mOffer Load (0.1ms)[0m  [1mSELECT "offers".* FROM "offers" INNER JOIN "offers_users" ON "offers"."id" = "offers_users"."offer_id" WHERE "offers_users"."user_id" = 2[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 53[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 53
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 58
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 58[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 38[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 59[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 59
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 66
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 66[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 38
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 74[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 74
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 37
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."product_id" = 31
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 75 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "offers_users" ON "users"."id" = "offers_users"."user_id" WHERE "offers_users"."offer_id" = 75
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "offers_products" ON "products"."id" = "offers_products"."product_id" WHERE "offers_products"."offer_id" = 75[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 37[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."product_id" = 31[0m
+  Rendered offers/index.html.erb within layouts/application (25.3ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 34.3ms (Views: 30.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /lightbox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /offers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/offers.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /offers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thebartershop_logo_1.png" for 127.0.0.1 at 2014-03-18 13:13:47 +0000
+Served asset /thebartershop_logo_1.png - 304 Not Modified (0ms)
