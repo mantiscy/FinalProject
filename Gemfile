@@ -9,6 +9,7 @@ gem "ransack"
 gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'kaminari'
 
 group :development do
   gem 'sqlite3'

@@ -23,4 +23,8 @@ ModelsSetupPlay::Application.routes.draw do
   get '/accept/:id', to: 'offers#accept', as: 'accept'
   put '/finalize_offer/:id', to: 'offers#finalize_offer', as: 'finalize_offer'
 
+  resources :offers do
+    get 'page/:page', action: :index, on: :collection
+  end
+
 end
