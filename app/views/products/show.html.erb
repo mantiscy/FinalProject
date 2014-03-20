@@ -4,7 +4,7 @@
   </div>
 
   <div class='grid_6 prefix_1' id='product_image_holder'>
-    <span id='zero'><%= image_tag @product.images[0].product_image.detail.url, class: 'prod_img' %></span>
+    <span id='zero'><%= link_to (image_tag @product.images[0].product_image.detail.url, class: 'prod_img'), (@product.images[0].product_image.detail.url), data: {lightbox: "roadtrip"}  %></span>
   </div>
 
   <div class='grid_8 suffix_1 show_box'>
@@ -33,7 +33,8 @@
   <div class='grid_6 prefix_1 suffix_9'>
     <% counter = 0 %>
     <% @product.images.each do |i| %>
-      <%= image_tag i.product_image.little.url, class: 'little', id: counter %>
+
+      <%= link_to (image_tag i.product_image.little.url, class: 'little'), (i.product_image.detail.url), data: {lightbox: "roadtrip"}  %>
       <% counter += 1 %>
     <% end %>
   </div>
