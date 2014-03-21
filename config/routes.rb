@@ -5,7 +5,7 @@ ModelsSetupPlay::Application.routes.draw do
 
 
   resources :offers
-
+  get '/completed_offers', to: 'offers#completed_offers', as: 'completed_offers'
 
   resources :products
 

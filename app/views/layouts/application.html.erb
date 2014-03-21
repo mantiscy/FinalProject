@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ModelsSetupPlay</title>
+  <title>Barter Shop</title>
   <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -26,7 +26,8 @@
             <li id='hello_user'>Hello, <%=current_user.email%>
               <ul>
                 <li><%= link_to 'My Items', products_path %></li>
-                <li><%= link_to 'My Offers', offers_path %></li>
+                <li><%= link_to 'Pending Offers', offers_path %></li>
+                <li><%= link_to 'Completed Offers', completed_offers_path %></li>
                 <li><%= link_to 'Add Item', new_product_path %></li>
                 <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
               </ul>

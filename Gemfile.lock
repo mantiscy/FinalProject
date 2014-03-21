@@ -83,6 +83,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    railroady (1.1.1)
     rails (3.2.17)
       actionmailer (= 3.2.17)
       actionpack (= 3.2.17)
@@ -143,6 +144,7 @@ DEPENDENCIES
   kaminari
   letter_opener
   pg
+  railroady
   rails (= 3.2.17)
   ransack
   rmagick

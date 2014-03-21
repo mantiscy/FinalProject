@@ -3,9 +3,17 @@ class OffersController < ApplicationController
   # GET /offers.json
   def index
     #@offers = current_user.offers
-    @offers = current_user.offers(:created_at).page(params[:page])
+    @offers = Offer.where("completed = ?", 'n').page(params[:page])
     respond_to do |format|
       format.html # index.html.erb
+      format.json { render json: @offers }
+    end
+  end
+
+  def completed_offers
+    @offers = Offer.where("completed = ?", 'y').page(params[:page])
+    respond_to do |format|
+      format.html 
       format.json { render json: @offers }
     end
   end

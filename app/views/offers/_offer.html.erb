@@ -1,0 +1,52 @@
+<div grid_16></div>
+    <% if offer.users.first == current_user %>
+      <p>Exchange with <%= offer.users[1].email %></p>
+    <% else %>
+      <p>Exchange with <%= offer.users[0].email %></p>
+    <% end %>
+
+    <div class='prefix_1 grid_6 offer_box_index'>
+      <% if offer.completed == 'y' %>
+        <p>You received:</p>
+      <% else %>
+        <p>You offerred:</p>
+      <% end %>
+      <% offer.products.each do |p| %>
+        <% if p.user == current_user %>
+          <%= image_tag p.images[0].product_image.little.url, class: 'little'%>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class='grid_6 offer_box_index'>
+      <% if offer.completed == 'y' %>
+        <p>You offerred:</p>
+      <% else %>
+        <p>You will receive:</p>
+      <% end %>
+      <% offer.products.each do |p| %>
+        <% if p.user != current_user %>
+          <%= image_tag p.images[0].product_image.little.url, class: 'little'%>
+        <% end %>
+      <% end %>
+    </div>
+    <div class='offer_options'>
+      <% if offer.initiated_by == current_user.id.to_s %>
+        <% if offer.completed == 'y' %>
+          <p>Swap completed</p>
+        <% else %>
+          <%= link_to 'Amend', add_path(offer) %> |
+          <%= link_to 'Cancel Offer', offer, method: :delete %>
+        <% end %>
+      <% else %>
+        <% if offer.completed == 'y' %>
+          <p>Swap completed</p>
+        <% else %>
+          <%= link_to 'Accept Offer', accept_path(offer) %> |
+          <%= link_to 'Make Counter Offer', add_path(offer) %> |
+          <%= link_to 'Cancel Offer', offer, method: :delete %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class='clear'></div>
+    <div grid_16><hr></div>

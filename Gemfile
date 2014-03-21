@@ -14,6 +14,7 @@ gem 'kaminari'
 group :development do
   gem 'sqlite3'
   gem "letter_opener"
+  gem 'railroady'
 end
 
 group :production do

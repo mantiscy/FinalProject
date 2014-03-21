@@ -1,7 +1,7 @@
 <div class='grid_5 product_box'>
-
-  
+<a href="/products/show/:id">
+  <span class='text'><%= product.name %></span>
   <%= link_to image_tag(product.product_image.thumb.url), product_path(product) %>
-
+</a>
 
 </div>

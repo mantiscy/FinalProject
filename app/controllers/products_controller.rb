@@ -39,6 +39,7 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
+    2.times{ @product.images.build }
   end
 
   # POST /products

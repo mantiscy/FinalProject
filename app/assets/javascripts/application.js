@@ -16,8 +16,9 @@
 
 $(function(){
 
-  $('.little').click(function(ev){
-    //Impletent functionality to change detail images based on whats clicked
+  $('.product_box').adipoli({
+      'startEffect' : 'normal',
+      'hoverEffect' : 'popout'
   });
 
 });
