@@ -35,7 +35,7 @@
         <% if offer.completed == 'y' %>
           <p>Swap completed</p>
         <% else %>
-          <%= link_to 'Amend', add_path(offer) %> |
+          <%= link_to 'Amend Offer', amend_path(offer) %> |
           <%= link_to 'Cancel Offer', offer, method: :delete %>
         <% end %>
       <% else %>
@@ -43,7 +43,7 @@
           <p>Swap completed</p>
         <% else %>
           <%= link_to 'Accept Offer', accept_path(offer) %> |
-          <%= link_to 'Make Counter Offer', add_path(offer) %> |
+          <%= link_to 'Make Counter Offer', amend_path(offer) %> |
           <%= link_to 'Cancel Offer', offer, method: :delete %>
         <% end %>
       <% end %>

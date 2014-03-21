@@ -22,6 +22,7 @@ ModelsSetupPlay::Application.routes.draw do
   get '/add/:id', to: 'offers#add', as: 'add'
   get '/accept/:id', to: 'offers#accept', as: 'accept'
   post '/finalize_offer', to: 'offers#finalize_offer', as: 'finalize_offer'
+  get '/amend/:id', to: 'offers#amend', as: 'amend'
 
   resources :offers do
     get 'page/:page', action: :index, on: :collection

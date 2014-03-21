@@ -1,0 +1,85 @@
+<div class='container_16 prod_details'>
+  <%= form_for(@offer) do |f| %>
+  <div class='grid_7 prefix_1 prod_header'>
+    <p class='offer_headers'>You offer:</p>
+    <div class='grid_7 offer_box'>
+    <!-- Display the items of the current user -->
+      <% current_user.products.each do |p| %>
+      <div class='grid_2 offer_item_view'>
+        <div class='little_img'><%= link_to (image_tag p.images[0].product_image.little.url, class: 'little'), product_path(p)%></div>
+        <br>
+        <div class='check_box_offer'><%= check_box_tag "@offer[product_ids][]", p.id, @offer.products.include?(p), class: 'cur_user_prods' %></div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div class='grid_7 suffix_1 prod_header'>
+    <p class='offer_headers'>Swap For:</p>
+    <div class='grid_7 offer_box'>
+      <!-- Get the other user involved in the offer and display his items -->
+      <% if @offer.users[0] == current_user %>
+        <% user = @offer.users[1] %>
+      <% else %>
+        <% user = @offer.users[0] %>
+      <% end %>
+      <% user.products.each do |p| %>  
+      <div class='grid_2'>
+        <div class='little_img'><%= link_to (image_tag p.images[0].product_image.little.url, class: 'little'), product_path(p)%></div>
+        <br>
+        <div class='check_box_offer'><%= check_box_tag "@offer[product_ids][]", p.id, @offer.products.include?(p), class: 'other_user_prods' %></div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class='clear'></div>
+
+  <div class="grid_16">
+    <%= f.submit 'Amend Offer', class: 'offer_submit'%>
+  </div>
+   
+<% end %>
+</div>
+
+<script>
+
+  //Checks that user has selected at least one item from each user
+  $(function() {
+    $('.offer_submit').click(function(ev){
+      check_boxes1 = $('.cur_user_prods')
+      check_boxes2 = $('.other_user_prods')
+      var flag1 = false
+      var flag2 = false
+
+      //Check user's own items
+      for(var i=0; i<check_boxes1.length; i++)
+      {
+        if(check_boxes1[i].checked)
+          flag1 = true;
+      }
+
+      if(flag1 == false)
+      {
+        ev.preventDefault();
+        Apprise("Select at least one of your items to trade");
+      }
+
+      //Check other user's items
+      for(var i=0; i<check_boxes2.length; i++)
+      {
+        if(check_boxes2[i].checked)
+          flag2 = true;
+      }
+      
+      if(flag2 == false)
+      {
+        ev.preventDefault();
+        Apprise("Select at least one of the other user's items to trade");
+      }
+    });
+  });
+</script>
+
+
+
+
