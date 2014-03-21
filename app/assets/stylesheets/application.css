@@ -720,7 +720,7 @@ box-shadow: 0px 0px 5px 2px rgba(116,116,117,1);
     top: 0;
     font-color: black;
     font-size: 20px;
-    background-color:rgba(255,255,255,0.8);
+    background-color:rgba(255,255,255,0.9);
     width: 300px;
     height: 300px;
     line-height:100px;
@@ -735,7 +735,10 @@ box-shadow: 0px 0px 5px 2px rgba(116,116,117,1);
 .text:hover {
     opacity:1;
 }
+
 #container > div.container_16 > div > span > a {
+  color: black;
+  font-size: 20px;
   display: block;
   height:300px;
   width: 300px;
@@ -860,6 +863,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
   border: lightgray 1px solid;
   background-color: white;
 }*/
+
+.product_image_holder {
+  height:402px;
+}
 
 
 

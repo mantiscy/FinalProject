@@ -26,7 +26,7 @@ class OffersController < ApplicationController
     @offer.initiated_by = current_user.id.to_s
     @offer.users << current_user
     @offer.users << @product.user
-    @offer.save
+    # @offer.save
     respond_to do |format|
       format.html { render :template => "offers/add" }
     end
@@ -34,11 +34,20 @@ class OffersController < ApplicationController
 
   def finalize_offer
     
+    @offer = Offer.new
+    @offer.completed = 'n'
+    @offer.initiated_by = current_user.id.to_s
+    @offer.users << current_user
+
     p_ids = params[:@offer][:product_ids]
-    @offer = Offer.find(params[:id])
+    # @offer = Offer.find(params[:id])
     @offer.products = []
     p_ids.each do |pid|
-      @offer.products << Product.find(pid)
+      prod = Product.find(pid)
+      @offer.products << prod
+      if prod.user != current_user
+        @offer.users << prod.user
+      end
     end
 
     if @offer.users[0] == current_user

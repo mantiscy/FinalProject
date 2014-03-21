@@ -3,7 +3,7 @@
     <p><%= @product.name %></p>
   </div>
 
-  <div class='grid_6 prefix_1' id='product_image_holder'>
+  <div class='grid_6 prefix_1 product_image_holder'>
     <span id='zero'><%= link_to (image_tag @product.images[0].product_image.detail.url, class: 'prod_img'), (@product.images[0].product_image.detail.url), data: {lightbox: "roadtrip"}  %></span>
   </div>
 
@@ -18,17 +18,33 @@
       <%= @product.description %>
     </p>
 
+    
+
     <% if current_user == nil %>
-      <%= link_to 'Maker Offer', add_first_item_path(@product) %> |
+      <%= link_to 'Make Offer', add_first_item_path(@product) %> |
       <%= link_to 'Ask Question', add_first_item_path(@product) %>
+
+    <% elsif current_user.email != @product.user.email && @product.offers.count > 0 %>
+      <% @product.offers.each do |o| %>
+        <%if (o.users[0] == current_user || o.users[1] == current_user) && o.completed == 'n' %>
+          <span>Offer Placed</span> |
+          <%= link_to 'Ask Question', add_first_item_path(@product) %>
+        <% else %>
+          <%= link_to 'Make Offer', add_first_item_path(@product) %> |
+          <%= link_to 'Ask Question', add_first_item_path(@product) %>
+        <% end %>
+      <% end %>
+
     <% elsif current_user.email != @product.user.email %>
-      <%= link_to 'Maker Offer', add_first_item_path(@product) %> |
+      <%= link_to 'Make Offer', add_first_item_path(@product) %> |
       <%= link_to 'Ask Question', add_first_item_path(@product) %>
+      
     <% else %>
       <%= link_to 'Edit', edit_product_path(@product) %> |
       <%= link_to 'Delete', @product, method: :delete %>
     <% end %>
   </div>
+  <div class='clear'></div>
 
   <div class='grid_6 prefix_1 suffix_9'>
     <% counter = 0 %>
