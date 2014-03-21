@@ -16,4 +16,8 @@ class UserMailer < ActionMailer::Base
   def offer_completed(user, offer)
     mail(:to => user.email, :subject => "Congrats! Swap completed!")
   end
+
+  def offer_cancelled(user, offer)
+    mail(:to => user.email, :subject => "Congrats! Swap completed!")
+  end
 end

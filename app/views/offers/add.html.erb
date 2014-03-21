@@ -1,5 +1,5 @@
 <div class='container_16 prod_details'>
-  <%= form_for(@offer, :url => finalize_offer_path) do |f| %>
+  <%= form_for(@offer, method: 'post', :url => finalize_offer_path) do |f| %>
   <div class='grid_7 prefix_1 prod_header'>
     <p class='offer_headers'>You offer:</p>
     <div class='grid_7 offer_box'>
