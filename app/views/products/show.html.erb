@@ -4,7 +4,7 @@
   </div>
 
   <div class='grid_6 prefix_1 product_image_holder'>
-    <span id='zero'><%= link_to (image_tag @product.images[0].product_image.detail.url, class: 'prod_img'), (@product.images[0].product_image.detail.url), data: {lightbox: "roadtrip"}  %></span>
+    <%= link_to (image_tag @product.images[0].product_image.detail.url, class: 'prod_img'), (@product.images[0].product_image.detail.url), data: {lightbox: "roadtrip"}  %>
   </div>
 
   <div class='grid_8 suffix_1 show_box'>
