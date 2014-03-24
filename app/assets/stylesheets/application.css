@@ -512,14 +512,6 @@ body {
   text-align: center;
 }
 
-.site-footer {
-  width: 100%;
-  height: 80px;
-  background: #e1e2e3;
-  /*position: fixed;
-  bottom: 0;*/
-}
-
 nav{
   padding: 10px;
   height: 150px;
@@ -882,6 +874,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
   border: green 2px solid;
 }
 
+.header1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+footer {
+  height: 100px;
+  background-image:url("/assets/bg.jpg");
+  margin-bottom: 0px;
+  /*margin-top: 30px;*/
+}
+
+.left_footer {
+  padding-top: 40px;
+  padding-left: 125px;
+  color: #838383;
+  width:500px;
+}
+
+.right_footer {
+  float:right;
+  margin-top: -15px;
+  margin-right: 125px;
+  color:#419f85;
+}
 
 
 
