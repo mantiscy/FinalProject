@@ -4,7 +4,7 @@
     <p class='offer_headers'>You offer:</p>
     <div class='grid_7 offer_box'>
     <!-- Display the items of the current user -->
-      <% current_user.products.each do |p| %>
+      <% current_user.products.where('available = ?', 'y').each do |p| %>
       <div class='grid_2 offer_item_view'>
         <div class='little_img'><%= link_to (image_tag p.images[0].product_image.little.url, class: 'little'), product_path(p)%></div>
         <br>
@@ -22,7 +22,7 @@
       <% else %>
         <% user = @offer.users[0] %>
       <% end %>
-      <% user.products.each do |p| %>  
+      <% user.products.where('available = ?', 'y').each do |p| %>  
       <div class='grid_2 offer_item_view'>
         <div class='little_img'><%= link_to (image_tag p.images[0].product_image.little.url, class: 'little'), product_path(p)%></div>
         <br>

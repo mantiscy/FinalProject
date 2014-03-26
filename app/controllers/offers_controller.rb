@@ -69,6 +69,7 @@ class OffersController < ApplicationController
     user1 = @offer.users[0]
     user2 = @offer.users[1]
     @offer.make_swap
+    @offer.save
     UserMailer.offer_completed(user1, @offer).deliver
     UserMailer.offer_completed(user2, @offer).deliver
     redirect_to home_index_url

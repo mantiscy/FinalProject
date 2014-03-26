@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
 
-    @products = current_user.products
+    @products = current_user.products.where('available = ?', 'y')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -47,6 +47,7 @@ class ProductsController < ApplicationController
   def create
     
     @product = Product.new(params[:product])
+    @product.available = 'y'
     @products = current_user.products
     respond_to do |format|
       if @product.save

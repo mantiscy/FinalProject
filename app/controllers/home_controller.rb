@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @products = Product.all
+    @products = Product.where('available = ?', 'y')
   end
 
   def search

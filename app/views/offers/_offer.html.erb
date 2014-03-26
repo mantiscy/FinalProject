@@ -1,4 +1,5 @@
 <div grid_16></div>
+    <%= offer.id %>
     <% if offer.users.first == current_user %>
       <p>Exchange with <%= offer.users[1].email %></p>
     <% else %>

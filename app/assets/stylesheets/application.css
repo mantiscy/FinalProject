@@ -38,6 +38,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
+  /*overflow:auto; */
+    padding-bottom: 150px;
 }
 
 /* Grid >> Global
@@ -499,6 +501,10 @@ a:visited{
   color: #419f85;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-image:url("/assets/pattern_bg.png");
   height: 100%;
@@ -506,6 +512,7 @@ body {
   font-family: 'Didact Gothic', sans-serif;
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
 }
 
 .center{
@@ -880,12 +887,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
   margin-top: 20px;
   margin-left: 20px;
 }
+#wrap {min-height: 100%;}
 
 footer {
-  height: 100px;
+
   background-image:url("/assets/bg.jpg");
-  margin-bottom: 0px;
-  /*margin-top: 30px;*/
+  position: relative;
+    margin-top: -150px;  
+    height: 150px;
+    clear:both;
+  margin-top: 0px;
 }
 
 .left_footer {
@@ -901,6 +912,8 @@ footer {
   margin-right: 125px;
   color:#419f85;
 }
+
+
 
 
 
