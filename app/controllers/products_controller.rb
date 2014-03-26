@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
 
-    @products = current_user.products.where('available = ?', 'y')
+    @products = current_user.products #.where('available = ?', 'y')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -74,6 +74,15 @@ class ProductsController < ApplicationController
         format.html { render action: "edit" }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def available_product
+    @product = Product.find(params[:id])
+    @product.available = 'y'
+    @product.save
+    respond_to do |format|
+      format.html { render :template => "products/show" }
     end
   end
 

@@ -1,5 +1,28 @@
 <div class='container_16'>
   <div class='grid_16 header1'>My Items</div>
-  <%= render @products %>
+
+  <div class='grid_16 header1'>Available Items</div>
+  <% @products.each do |p| %>
+    <% if p.available == 'y' %>
+      <div class='grid_5 product_box'>
+        <span class='text'><%= link_to p.name, product_path(p) %></span>
+        <%= link_to image_tag(p.images[0].product_image.thumb.url), product_path(p) %>
+      </div>
+    <% end %>
+
+  <% end %>
+  
+  <div class='grid_16 header1'>Traded Items</div>
+
+  <% @products.each do |p| %>
+    <% if p.available == 'n' %>
+      <div class='grid_5 product_box'>
+        <span class='text'><%= link_to p.name, product_path(p) %></span>
+        <%= link_to image_tag(p.images[0].product_image.thumb.url), product_path(p) %>
+      </div>
+    <% end %>
+
+  <% end %>
+</div>
 </div>
 

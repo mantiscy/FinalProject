@@ -24,6 +24,8 @@ ModelsSetupPlay::Application.routes.draw do
   post '/finalize_offer', to: 'offers#finalize_offer', as: 'finalize_offer'
   get '/amend/:id', to: 'offers#amend', as: 'amend'
 
+  put '/available_product/:id', to: 'products#available_product', as: 'available_product'
+
   resources :offers do
     get 'page/:page', action: :index, on: :collection
   end
