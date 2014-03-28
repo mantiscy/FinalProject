@@ -64,23 +64,12 @@ class OffersController < ApplicationController
     redirect_to offers_path
   end
 
-  def accept #Make the swap of the items
-    @offer = Offer.find(params[:id])
-    user1 = @offer.users[0]
-    user2 = @offer.users[1]
-    @offer.make_swap
-    @offer.save
-    UserMailer.offer_completed(user1, @offer).deliver
-    UserMailer.offer_completed(user2, @offer).deliver
-    redirect_to home_index_url
-  end
-
   def amend
     @offer = Offer.find(params[:id])  
   end
 
   def update
-    # raise
+
     @offer = Offer.find(params[:id])
     p_ids = params[:@offer][:product_ids]
     # @offer = Offer.find(params[:id])
@@ -92,10 +81,24 @@ class OffersController < ApplicationController
 
     @offer.initiated_by = current_user.id.to_s
     @offer.save
+    # raise
     # UserMailer.amend_confirmation(current_user, @offer).deliver
     # UserMailer.amend_offer(@user2, @offer).deliver
     redirect_to offers_path
   end
+
+  def accept #Make the swap of the items
+    @offer = Offer.find(params[:id])
+    user1 = @offer.users[0]
+    user2 = @offer.users[1]
+    @offer.make_swap
+    @offer.save
+    UserMailer.offer_completed(user1, @offer).deliver
+    UserMailer.offer_completed(user2, @offer).deliver
+    redirect_to home_index_url
+  end
+
+
 
   # DELETE /offers/1
   # DELETE /offers/1.json

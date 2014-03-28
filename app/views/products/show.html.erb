@@ -40,9 +40,6 @@
       <%= link_to 'Ask Question', add_first_item_path(@product) %>
       
     <% else %>
-      <% if @product.available == 'n' %>
-        <%= link_to 'Make Available', available_product_path(@product), method: :put %> |
-      <% end %>
       <%= link_to 'Edit', edit_product_path(@product) %> |
       <%= link_to 'Delete', @product, method: :delete %>
     <% end %>

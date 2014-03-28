@@ -8,7 +8,7 @@
       <div class='grid_2 offer_item_view'>
         <div class='little_img'><%= link_to (image_tag p.images[0].product_image.little.url, class: 'little'), product_path(p)%></div>
         <br>
-        <div class='check_box_offer'><%= check_box_tag "@offer[product_ids][]", p.id, @offer.products.include?(p), class: 'cur_user_prods' %></div>
+        <div class='check_box_offer'><%= check_box_tag "@offer[product_ids][]", p.id, @offer.products.include?(p), class: 'cur_user_prods offer_checkbox' %></div>
       </div>
       <% end %>
     </div>
@@ -22,11 +22,11 @@
       <% else %>
         <% user = @offer.users[0] %>
       <% end %>
-      <% user.products.each do |p| %>  
-      <div class='grid_2'>
+      <% user.products.where('available = ?', 'y').each do |p| %>  
+      <div class='grid_2 offer_item_view'>
         <div class='little_img'><%= link_to (image_tag p.images[0].product_image.little.url, class: 'little'), product_path(p)%></div>
         <br>
-        <div class='check_box_offer'><%= check_box_tag "@offer[product_ids][]", p.id, @offer.products.include?(p), class: 'other_user_prods' %></div>
+        <div class='check_box_offer'><%= check_box_tag "@offer[product_ids][]", p.id, @offer.products.include?(p), class: 'other_user_prods offer_checkbox' %></div>
       </div>
       <% end %>
     </div>
@@ -77,6 +77,19 @@
         Apprise("Select at least one of the other user's items to trade");
       }
     });
+
+    // $('.offer_item_view').click(function(ev){
+    //   ev.preventDefault();
+    //   if($(this).find('input:checkbox').is(':checked'))
+    //   {
+    //     $(this).find('input:checkbox').prop("checked", false);
+    //   }
+    //   else
+    //   {
+    //     $(this).find('input:checkbox').prop("checked", true);
+    //   }
+
+    // });  
   });
 </script>
 
