@@ -78,7 +78,12 @@ class ProductsController < ApplicationController
   end
 
   def available_product
-    @product = Product.find(params[:id])
+    p = Product.find(params[:id])
+    @product = Product.new
+    @product.name = p.name
+    @product.user = current_user
+    @product.description = p.description
+    @product.images = p.images
     @product.available = 'y'
     @product.save
     respond_to do |format|
