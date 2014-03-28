@@ -1,6 +1,12 @@
 class HomeController < ApplicationController
   def index
-    @products = Product.where('available = ?', 'y')
+    prods = Product.where('available = ?', 'y')
+    @products = []
+    prods.each do |p|
+      if p.user != current_user
+        @products << p
+      end
+    end
   end
 
   def search
